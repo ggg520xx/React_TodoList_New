@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <link rel="stylesheet" href="stylesheets/css/all.css">
+
+</head>
+
+<body>
+
+  <div id="root">
+    <!-- JSX 元素會覆蓋 #root  -->
+    <h2>12345678</h2>
+  </div>
+
+
+  <!-- React 建置介面的資料結構環境 處理資料用的-->
+  <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+  <!-- 將前者進行渲染 (Render) 資料的處理內容印在網頁上 -->
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+  <!-- 上面兩隻為核心 -->
+
+  <!--  Q:為什麼React 及 React Dom 要分開  簡單說 為了方便各自獨立運作 REACT -->
+
+  <!-- 最初所有功能都包含在 React 後來才拆分 為什麼React 及 React Dom 要分開？
+  因為有了 ReactNative。
+
+  React 包含了 Web 和 Mobile 通用的核心部分
+  (React不仅能用在Web页面，还能用在服务器端SSR，移动端和桌面端 , 包含了 React 的主干逻辑。例如组件实现、更新调度)
+
+  負責 Dom 操作的分到 ReactDOM 中 (ReactDOM只负责和Web页面的DOM打交道 主要用于在 web 端进行渲染)
+  負責 Mobile 的包含在 ReactNative -->
+
+
+
+  <!-- -------------------- -->
+
+  <!-- 解析 JSX  和 React 可以個別載入 有些開發者沒用到JSX就不會載入 -->
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+
+
+  <!-- 自己的 JS -->
+  <script src="all.jsx" type="text/babel"></script>
+  <!-- type="text/babel格式一定要打上 這樣他才能解析JSX格式 -->
+  <!-- babel 編譯器 解析 jsx ,  網頁預設看不懂jsx語法 -->
+
+
+</body>
+
+</html>
